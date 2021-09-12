@@ -3,6 +3,7 @@ const ROUTES = {
   "list": list(),
   "login": login(),
   "reports": reports(),
+  "categories": listCategories(),
 };
 
 
@@ -13,6 +14,7 @@ function navbar() {
       <button data-component="menu" data-action="list" class="btn btn-outline-dark">Listar</button>
       <button data-component="menu" data-action="login" class="btn btn-outline-dark">Login</button>
       <button data-component="menu" data-action="reports" class="btn btn-outline-dark">Relatórios</button>
+      <button data-component="menu" data-action="categories" class="btn btn-outline-dark">Categorias</button>
     </nav>
   `;
 }
