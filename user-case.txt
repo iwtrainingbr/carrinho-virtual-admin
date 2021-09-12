@@ -14,7 +14,7 @@ WebAdmin {
     - Categoria (relacionamento)
     - Quantidade
 
-  - Gerenciamento de Clientes
+  - Gerenciamento de Clientes 
     - nome
     - Email
     - Telefone
