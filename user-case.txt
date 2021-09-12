@@ -1,0 +1,42 @@
+- Carrinho Virtual (admin vai ter o controle de mercadorias/produtos, no app o cliente coloca no carrinho, ao termino da compra vai pro zapzap).
+
+WebAdmin {
+  - Gerenciamento de categorias
+    - Nome
+    - Descrição
+    - Foto
+
+  - Gerenciamento de produtos
+    - Nome
+    - Valor
+    - Fotos
+    - Descrição
+    - Categoria (relacionamento)
+    - Quantidade
+
+  - Gerenciamento de Clientes
+    - nome
+    - Email
+    - Telefone
+    - Endereços
+    - Data de nascimento
+
+  - Gerenciamento de Pedidos
+    - produtos (relacionamento)
+    - cliente (relacionamento)
+    - endereço de entrega
+    - valor total
+    - data
+    - status
+}
+
+App {
+  - Ver as categorias
+  - Ver os produtos
+    - add ao Carrinho
+    - fazer pedido
+    - enviar pro whatsapp
+  - Se cadastrar
+    - acompanhar Pedidos
+
+}
