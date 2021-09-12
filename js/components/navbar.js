@@ -4,6 +4,7 @@ const ROUTES = {
   "login": login(),
   "reports": reports(),
   "categories": listCategories(),
+  "addCategory": addCategory(),
 };
 
 
@@ -15,6 +16,7 @@ function navbar() {
       <button data-component="menu" data-action="login" class="btn btn-outline-dark">Login</button>
       <button data-component="menu" data-action="reports" class="btn btn-outline-dark">Relatórios</button>
       <button data-component="menu" data-action="categories" class="btn btn-outline-dark">Categorias</button>
+      <button data-component="menu" data-action="addCategory" class="btn btn-outline-dark">Nova Categoria</button>
     </nav>
   `;
 }
