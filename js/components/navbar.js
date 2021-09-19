@@ -12,12 +12,32 @@ const ROUTES = {
 function navbar() {
   return `
     <nav class="text-end">
-      <button data-component="menu" data-action="categories" class="btn btn-outline-dark">Categorias</button>
-      <button data-component="menu" data-action="addCategory" class="btn btn-outline-dark">Nova Categoria</button>
-      <button data-component="menu" data-action="addClient" class="btn btn-outline-dark">Novo Cliente</button>
-      <button data-component="menu" data-action="listClients" class="btn btn-outline-dark">Clientes</button>
-      <button data-component="menu" data-action="products" class="btn btn-outline-dark">Produtos</button>
-      <button data-component="menu" data-action="addProduct" class="btn btn-outline-dark">Novo Produto</button>
+      <div class="btn-group">
+        <button data-menu-group="categories" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Categorias
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a data-menu-item="categories" class="dropdown-item" data-component="menu" data-action="addCategory">Nova</a></li>
+          <li><a data-menu-item="categories" class="dropdown-item" data-component="menu" data-action="categories">Listar</a></li>
+        </ul>
+
+        <button data-menu-group="clients" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Clientes
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a data-menu-item="clients" class="dropdown-item" data-component="menu" data-action="addClient">Novo</a></li>
+          <li><a data-menu-item="clients" class="dropdown-item" data-component="menu" data-action="listClients">Listar</a></li>
+        </ul>
+
+        <button data-menu-group="products" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Produtos
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a data-menu-item="products" class="dropdown-item" data-component="menu" data-action="addProduct">Novo</a></li>
+          <li><a data-menu-item="products" class="dropdown-item" data-component="menu" data-action="products">Listar</a></li>
+        </ul>
+      </div>
+
       <button data-component="menu" data-action="listOrders" class="btn btn-outline-dark">Listar Pedidos</button>
     </nav>
   `;
