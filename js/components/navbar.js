@@ -1,11 +1,12 @@
 const ROUTES = {
-  "categories": listCategories(),
-  "addCategory": addCategory(),
-  "addClient": addClient(),
-  "listClients": listClients(),
-  "products": listProducts(),
-  "addProduct": addProduct(),
-  "listOrders": listOrders(),
+  "categories": listCategories,
+  "addCategory": addCategory,
+  "addClient": addClient,
+  "listClients": listClients,
+  "products": listProducts,
+  "addProduct": addProduct,
+  "listOrders": listOrders,
+  "vehicles": listVehicles,
 };
 
 
@@ -35,6 +36,14 @@ function navbar() {
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a data-menu-item="products" class="dropdown-item" data-component="menu" data-action="addProduct">Novo</a></li>
           <li><a data-menu-item="products" class="dropdown-item" data-component="menu" data-action="products">Listar</a></li>
+        </ul>
+
+        <button data-menu-group="vehicles" class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Veiculos
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a data-menu-item="vehicles" class="dropdown-item" data-component="menu" data-action="#">Novo</a></li>
+          <li><a data-menu-item="vehicles" class="dropdown-item" data-component="menu" data-action="vehicles">Listar</a></li>
         </ul>
       </div>
 

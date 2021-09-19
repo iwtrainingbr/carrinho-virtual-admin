@@ -37,6 +37,6 @@ MENU.forEach(item => {
 
     window.history.pushState('', '', action);
 
-    document.getElementById('content').innerHTML =  ROUTES[action];
+    document.getElementById('content').innerHTML =  ROUTES[action]();
   });
 });
