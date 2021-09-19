@@ -1,16 +1,22 @@
 function listCategories() {
-  let data = [0, 1, 2, 3, 4, 5].map(item => {
-    return `
-      <tr>
-        <td>Categoria ${item}</td>
-        <td>Descrição ${item}</td>
-        <td>Foto ${item}</td>
-        <td>
-          <button class="btn btn-warning btn-sm">Editar</button>
-          <button class="btn btn-danger btn-sm">Excluir</button>
-        </td>
-      </tr>
-    `;
+  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/categories.json')
+    .then(response => response.json())
+    .then(categories => {
+      const TABLE_CATEGORY = document.getElementById('table-list-category');
+
+      for (let id in categories) {
+          TABLE_CATEGORY.innerHTML += `
+          <tr>
+            <td>${categories[id].name}</td>
+            <td>${categories[id].description}</td>
+            <td><img src="${categories[id].photo}" width="100px"></td>
+            <td>
+              <button class="btn btn-warning btn-sm">Editar</button>
+              <button class="btn btn-danger btn-sm">Excluir</button>
+            </td>
+          </tr>
+        `;
+      }
   });
 
   return `
@@ -26,9 +32,7 @@ function listCategories() {
             <th>Ações</th>
           </tr>
         </thead>
-        <tbody>
-          ${data.join('')}
-        </tbody>
+        <tbody id="table-list-category"></tbody>
       </table>
   `;
 }
