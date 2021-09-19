@@ -1,6 +1,6 @@
 function addClient() {
     return `
-      <h2>Novo Cliente</h2>
+      <h2>Novo Cliente &#128100;</h2>
       <hr>
 
       <form action="#" onsubmit="validateAddClient(this)">

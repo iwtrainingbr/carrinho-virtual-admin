@@ -23,7 +23,7 @@ function listOrders() {
     });
 
 return `
-  <h2>Listar Pedidos</h2>
+  <h2>Listar Pedidos &#128202; </h2>
   <hr>
       <table class="table table-hover table-striped">
         <thead class="table-dark">
