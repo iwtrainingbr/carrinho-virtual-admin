@@ -1,4 +1,4 @@
-function validateAddClient(event) {
+function validateAddClient() {
     event.preventDefault();
 
     let valid = true;
@@ -25,7 +25,7 @@ function validateAddClient(event) {
         valid = false;
     }
     if (CLIENT_DATE.value === '') {
-        CLIENT_DATE.classList.add('is-invalid');
+        CLIENT_DATE.style.border = "1px solid red";
         valid = false;
     }
 
