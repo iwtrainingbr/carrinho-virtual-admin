@@ -16,7 +16,7 @@ function listClients() {
   });
 
   return `
-      <h2>Clientes</h2>
+      <h2>Listar Clientes &#128101;</h2>
       <hr>
 
       <table class="table table-hover table-striped">

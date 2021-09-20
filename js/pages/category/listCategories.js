@@ -20,7 +20,7 @@ function listCategories() {
   });
 
   return `
-      <h2>Categorias</h2>
+      <h2>Listar Categorias &#128451;</h2>
       <hr>
 
       <table class="table table-hover table-striped">

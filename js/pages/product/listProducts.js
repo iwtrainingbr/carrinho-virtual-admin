@@ -23,7 +23,7 @@ function listProducts(){
         });
 
     return `
-        <h2>Listar Produtos</h2>
+        <h2>Listar Produtos &#128221;</h2>
         <hr>
             <table class="table table-hover table-striped">
               <thead class="table-dark">
@@ -42,6 +42,3 @@ function listProducts(){
           `;
 
 }
-
-
-
