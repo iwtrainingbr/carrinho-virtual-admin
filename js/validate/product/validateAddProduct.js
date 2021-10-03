@@ -8,7 +8,7 @@ function addNovoProduto() {
   const INPUT_DESCRIPTION = document.getElementById("product-description");
   const INPUT_CATEGORY = document.getElementById("product-category");
   const INPUT_QUANTITY = document.getElementById("product-quantity");
-    
+
   if (INPUT_NAME.value === '') {
       INPUT_NAME.classList.add('is-invalid');
     valid = false;
@@ -51,7 +51,7 @@ function addNovoProduto() {
     quantity: INPUT_QUANTITY.value,
   };
 
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/products.json', {
+  fetch(API_URL'/products.json', {
     method: 'POST',
     body: JSON.stringify(newProduct)
   });

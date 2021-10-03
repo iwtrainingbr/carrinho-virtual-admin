@@ -1,5 +1,5 @@
 function listCategories() {
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/categories.json')
+  fetch(API_URL + '/categories.json')
     .then(response => response.json())
     .then(categories => {
       const TABLE_CATEGORY = document.getElementById('table-list-category');

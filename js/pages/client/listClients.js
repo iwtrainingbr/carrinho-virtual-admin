@@ -1,5 +1,5 @@
 function listClients() {
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/clients.json')
+  fetch(API_URL + '/clients.json')
     .then(response => response.json())
     .then(clients => {
       const TABLE_CLIENTS = document.getElementById('table-list-clients');
