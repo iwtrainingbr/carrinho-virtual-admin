@@ -7,11 +7,11 @@ function listProducts(){
             for (let id in products) {
                 TABLE_PRODUCTS.innerHTML += `
           <tr>
-      <td>${products[id].category}</td>
-      <td>${products[id].description}</td>
       <td>${products[id].name}</td>
-      <td>${products[id].photo}</td>
       <td>${products[id].price}</td>
+      <td><img src="${products[id].photo}" width="100px"></td>
+      <td>${products[id].description}</td>
+      <td>${products[id].category}</td>
       <td>${products[id].quantity}</td>
       <td>
         <button class="btn btn-warning btn-sm">Editar</button>
