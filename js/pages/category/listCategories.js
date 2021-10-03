@@ -9,7 +9,10 @@ function listCategories() {
           <tr>
             <td>${categories[id].name}</td>
             <td>${categories[id].description}</td>
-            <td><img src="${categories[id].photo}" width="100px"></td>
+            <td>
+              <a href="${categories[id].photo}" data-lightbox="${categories[id].photo}" data-title="${categories[id].name}">
+              <img src="${categories[id].photo}" width='100'>
+              </a>
             <td>
               <button class="btn btn-warning btn-sm">Editar</button>
               <button class="btn btn-danger btn-sm">Excluir</button>
