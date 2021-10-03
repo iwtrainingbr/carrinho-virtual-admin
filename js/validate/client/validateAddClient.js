@@ -29,5 +29,25 @@ function validateAddClient() {
         valid = false;
     }
 
-    return valid;
+    if (valid === false) {
+      return;
+    }
+
+   let newClient = {
+     name: CLIENT_NAME.value,
+     email: CLIENT_EMAIL.value,
+     phone: CLIENT_PHONE.value,
+     address: CLIENT_ADDRESS.value,
+     date: CLIENT_DATE.value,
+   };
+
+  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/client.json',{
+    method:'POST',
+    body: JSON.stringify(newClient)
+  });
+
+  alert('Cliente inserido com sucesso');
+
+  location.href = '/';
+
 }
