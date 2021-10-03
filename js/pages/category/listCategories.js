@@ -1,8 +1,24 @@
-function listCategories() {
+const removeCategory = (id) => {
+  if (false === confirm('Você tem certeza?')) {
+    return;
+  }
+
+  fetch(API_URL + `/categories/${id}.json`, {
+    method: 'DELETE'
+  });
+
+  alert('Categoria Excluída')
+
+  findCategories();
+}
+
+function findCategories(){
   fetch(API_URL + '/categories.json')
     .then(response => response.json())
     .then(categories => {
       const TABLE_CATEGORY = document.getElementById('table-list-category');
+
+      TABLE_CATEGORY.innerHTML = '';
 
       for (let id in categories) {
           TABLE_CATEGORY.innerHTML += `
@@ -15,12 +31,18 @@ function listCategories() {
               </a>
             <td>
               <button class="btn btn-warning btn-sm">Editar</button>
-              <button class="btn btn-danger btn-sm">Excluir</button>
+              <button onclick="removeCategory('${id}')" class="btn btn-danger btn-sm">Excluir</button>
             </td>
           </tr>
         `;
       }
   });
+}
+
+function listCategories() {
+  findCategories();
+
+
 
   return `
       <h2>Listar Categorias &#128451;</h2>
