@@ -41,7 +41,7 @@ function validateAddClient() {
      date: CLIENT_DATE.value,
    };
 
-  fetch(API_URL + '/client.json',{
+  fetch(API_URL + '/clients.json',{
     method:'POST',
     body: JSON.stringify(newClient)
   });
