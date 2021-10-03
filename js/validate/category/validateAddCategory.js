@@ -30,7 +30,7 @@ function validateAddCategory() {
       description: CATEGORY_DESCRIPTION.value,
     };
 
-    fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/categories.json', {
+    fetch(API_URL'/categories.json', {
       method: 'POST',
       body: JSON.stringify(newCategory)
     });

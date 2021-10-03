@@ -41,7 +41,7 @@ function validateAddClient() {
      date: CLIENT_DATE.value,
    };
 
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/client.json',{
+  fetch(API_URL'/client.json',{
     method:'POST',
     body: JSON.stringify(newClient)
   });

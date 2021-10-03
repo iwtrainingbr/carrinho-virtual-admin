@@ -19,7 +19,7 @@ function validateAddVehicle() {
     model: VEHICLE_MODEL.value,
   };
 
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/vehicles.json', {
+  fetch(API_URL'/vehicles.json', {
     method: 'POST',
     body: JSON.stringify(newVehicle)
   });
