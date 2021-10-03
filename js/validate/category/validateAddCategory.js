@@ -11,14 +11,23 @@ function validateAddCategory() {
     valid = false;
   }
 
-  if (CATEGORY_PHOTO.value === '') {
-    CATEGORY_PHOTO.classList.add('is-invalid');
-    valid = false;
-  }
-  if (CATEGORY_DESCRIPTION.value === '') {
-    CATEGORY_DESCRIPTION.classList.add('is-invalid');
-    valid = false;
+  if (valid === false) {
+    return;
   }
 
-  return valid;
+  let newCategory = {
+    name: CATEGORY_NAME.value,
+    photo: CATEGORY_PHOTO.value,
+    description: CATEGORY_DESCRIPTION.value,
+  };
+
+  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/categories.json', {
+    method: 'POST',
+    body: JSON.stringify(newCategory)
+  });
+
+  alert('Categoria inserida com sucesso');
+
+  location.href = '/';
+
 }
