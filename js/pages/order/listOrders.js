@@ -1,9 +1,23 @@
-function listOrders() {
+const removeOrder = (id) => {
+  if (false === confirm('Você tem certeza?')) {
+    return;
+  }
+
+  fetch(API_URL + `/orders/${id}.json`, {
+    method: 'DELETE'
+  });
+  alert ('Pedido excluido')
+
+  findOrders();
+}
+
+function findOrders() {
   fetch(API_URL + '/orders.json')
     .then(response => response.json())
     .then(orders => {
       const TABLE_ORDERS = document.getElementById('table-list-orders');
 
+      TABLE_ORDERS.innerHTML='';
       for (let id in orders) {
         TABLE_ORDERS.innerHTML += `
           <tr>
@@ -15,12 +29,17 @@ function listOrders() {
             <td>${orders[id].status}</td>
             <td>
               <button class="btn btn-warning btn-sm">Editar</button>
-              <button class="btn btn-danger btn-sm">Excluir</button>
+              <button onclick="removeOrder('${id}')" class="btn btn-danger btn-sm">Excluir</button>
             </td>
           </tr>
         `
       }
     });
+}
+
+function listOrders() {
+
+  findOrders();
 
 return `
   <h2>Listar Pedidos &#128202; </h2>
