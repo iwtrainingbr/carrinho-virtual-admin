@@ -1,4 +1,19 @@
 function addProduct() {
+
+  fetch(API_URL + '/categories.json')
+    .then(response => response.json())
+    .then(categories => {
+        const SELECT_CATEGORY = document.getElementById('product-category');
+
+      for (let id in categories) {
+          SELECT_CATEGORY.innerHTML += `
+          <option>
+            ${categories[id].name}
+          </option>
+        `;
+      }
+  });
+
   return `
       <h2>Novo Produto &#128221;</h2>
       <hr>
@@ -21,9 +36,8 @@ function addProduct() {
         <br>
 
         <label for="category">Categoria</label>
-        <select class="form-control w-50 p-3" id=product-category name="select">
+        <select class="form-control w-50 p-3" id="product-category" name="select">
           <option value="">--Selecione--</option>
-          <option>Bebidas</option>
         </select>
         <br>
 
