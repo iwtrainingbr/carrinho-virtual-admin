@@ -20,5 +20,24 @@ function validateAddCategory() {
     valid = false;
   }
 
-  return valid;
+  if (valid === false) {
+    return;
+  }
+
+    let newCategory = {
+      name: CATEGORY_NAME.value,
+      photo: CATEGORY_PHOTO.value,
+      description: CATEGORY_DESCRIPTION.value,
+    };
+
+    fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/categories.json', {
+      method: 'POST',
+      body: JSON.stringify(newCategory)
+    });
+
+    alert('Categoria inserida com sucesso');
+
+    location.href = '/';
+
+    return valid;
 }
