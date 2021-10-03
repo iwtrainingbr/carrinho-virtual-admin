@@ -7,6 +7,7 @@ const ROUTES = {
   "addProduct": addProduct,
   "listOrders": listOrders,
   "vehicles": listVehicles,
+  "addVehicle": addVehicle,
 };
 
 
@@ -42,7 +43,7 @@ function navbar() {
           Veiculos
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a data-menu-item="vehicles" class="dropdown-item" data-component="menu" data-action="#">Novo</a></li>
+          <li><a data-menu-item="vehicles" class="dropdown-item" data-component="menu" data-action="addVehicle">Novo</a></li>
           <li><a data-menu-item="vehicles" class="dropdown-item" data-component="menu" data-action="vehicles">Listar</a></li>
         </ul>
       </div>
