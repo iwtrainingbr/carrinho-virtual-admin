@@ -30,7 +30,7 @@ function validateAddCategory() {
       description: CATEGORY_DESCRIPTION.value,
     };
 
-    fetch(API_URL'/categories.json', {
+    fetch(API_URL + '/categories.json', {
       method: 'POST',
       body: JSON.stringify(newCategory)
     });
