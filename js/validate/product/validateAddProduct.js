@@ -51,7 +51,7 @@ function addNovoProduto() {
     quantity: INPUT_QUANTITY.value,
   };
 
-  fetch(API_URL'/products.json', {
+  fetch(API_URL + '/products.json', {
     method: 'POST',
     body: JSON.stringify(newProduct)
   });
