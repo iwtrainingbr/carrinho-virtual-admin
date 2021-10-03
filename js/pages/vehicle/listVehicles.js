@@ -1,5 +1,5 @@
 function listVehicles() {
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/vehicles.json')
+  fetch(API_URL + '/vehicles.json')
     .then(response => response.json())
     .then(vehicles => {
       const TABLE_VEHICLES = document.getElementById('table-list-vehicles');

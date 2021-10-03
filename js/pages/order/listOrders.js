@@ -1,5 +1,5 @@
 function listOrders() {
-  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/orders.json')
+  fetch(API_URL + '/orders.json')
     .then(response => response.json())
     .then(orders => {
       const TABLE_ORDERS = document.getElementById('table-list-orders');
