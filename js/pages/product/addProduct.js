@@ -23,6 +23,7 @@ function addProduct() {
         <label for="category">Categoria</label>
         <select class="form-control w-50 p-3" id=product-category name="select">
           <option value="">--Selecione--</option>
+          <option>Bebidas</option>
         </select>
         <br>
 
