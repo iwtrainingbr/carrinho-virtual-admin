@@ -44,6 +44,7 @@ function addNovoProduto() {
   }
 
   let newProduct = {
+    name: INPUT_NAME.value,
     price: INPUT_PRICE.value,
     photo: INPUT_PHOTO.value,
     description: INPUT_DESCRIPTION.value,
