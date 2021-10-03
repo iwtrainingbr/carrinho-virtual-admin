@@ -1,4 +1,25 @@
 function listClients() {
+  fetch('https://carrinho-virtual-iw-default-rtdb.firebaseio.com/clients.json')
+    .then(response => response.json())
+    .then(clients => {
+      const TABLE_CLIENTS = document.getElementById('table-list-clients');
+
+      for (let id in clients) {
+          TABLE_CLIENTS.innerHTML += `
+          <tr>
+          <td> ${clients[id].name}</td>
+          <td> ${clients[id].email}</td>
+          <td> ${clients[id].phone}</td>
+          <td> ${clients[id].birth}</td>
+          <td> ${clients[id].address}</td>
+            <td>
+              <button class="btn btn-warning btn-sm">Editar</button>
+              <button class="btn btn-danger btn-sm">Excluir</button>
+            </td>
+          </tr>
+        `;
+      }
+  });
   let data = [0, 1, 2, 3, 4, 5].map(item => {
     return `
       <tr>
@@ -30,8 +51,7 @@ function listClients() {
             <th>Ações</th>
           </tr>
         </thead>
-        <tbody>
-          ${data.join('')}
+        <tbody id="table-list-clients">
         </tbody>
       </table>
   `;
