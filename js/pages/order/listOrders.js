@@ -6,7 +6,7 @@ const removeOrder = (id) => {
   fetch(API_URL + `/orders/${id}.json`, {
     method: 'DELETE'
   });
-  alert ('Produto excluido')
+  alert ('Pedido excluido')
 
   findOrders();
 }
@@ -40,7 +40,6 @@ function findOrders() {
 function listOrders() {
 
   findOrders();
-
 
 return `
   <h2>Listar Pedidos &#128202; </h2>
